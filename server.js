@@ -4,14 +4,14 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/api');
 const errorHandler = require('./middleware/errorHandler');
 const cors = require('cors');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 const User = require('./models/User');
 const axios = require('axios');
 
-dotenv.config();
+// dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 // Middleware
 app.use(cors({
@@ -25,7 +25,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://ishaanaga23:randomPassword@cluster0.ebkp9qd.mongodb.net/voters';
+const MONGODB_URI =  'mongodb+srv://ishaanaga23:randomPassword@cluster0.ebkp9qd.mongodb.net/voters';
 
 mongoose.connect(MONGODB_URI, { 
     useNewUrlParser: true, 
@@ -229,14 +229,14 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-    console.log('Available routes:');
-    console.log('- POST /api/register');
-    console.log('- GET /api/users/:id');
-    console.log('- POST /api/verify');
-    console.log('- GET /ping');
-});
+// app.listen(PORT, () => {
+//     console.log(`Server is running on http://localhost:${PORT}`);
+//     console.log('Available routes:');
+//     console.log('- POST /api/register');
+//     console.log('- GET /api/users/:id');
+//     console.log('- POST /api/verify');
+//     console.log('- GET /ping');
+// });
 
 
 module.exports = app;
