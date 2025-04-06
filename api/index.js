@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const userRoutes = require('./routes/api');
-const errorHandler = require('./middleware/errorHandler');
+const userRoutes = require('../routes/api');
+const errorHandler = require('../middleware/errorHandler');
 const cors = require('cors');
 // const dotenv = require('dotenv');
-const User = require('./models/User');
+const User = require('../models/User');
 const axios = require('axios');
 
 // dotenv.config();
@@ -229,14 +229,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-// app.listen(PORT, () => {
-//     console.log(`Server is running on http://localhost:${PORT}`);
-//     console.log('Available routes:');
-//     console.log('- POST /api/register');
-//     console.log('- GET /api/users/:id');
-//     console.log('- POST /api/verify');
-//     console.log('- GET /ping');
-// });
+// apa
 
 
 module.exports = app;
