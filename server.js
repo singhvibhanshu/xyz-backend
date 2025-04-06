@@ -237,3 +237,7 @@ app.listen(PORT, () => {
     console.log('- POST /api/verify');
     console.log('- GET /ping');
 });
+
+
+module.exports = app;
+

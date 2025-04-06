@@ -1,10 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "server.cjs",
+  "main": "server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node server.cjs"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
